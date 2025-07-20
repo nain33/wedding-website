@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Domine:wght@400..700&display=swap");
+
 @import "tailwindcss";
 
 @font-face {
@@ -9,5 +12,11 @@
 }
 
 @theme {
-  --font-sans: "Wotham", sans-serif;
+  --font-wotham: "Wotham", sans-serif;
+  --font-dancing-script: "Dancing Script", cursive;
+  --font-domine: "Domine", serif;
+
+  --color-title-green: #266f3c;
+  --color-title-red: #860225;
+  --color-background-green: #e0ece6;
 }
