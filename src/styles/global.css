@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Wotham";
-  src: url("/public/fonts/Wotham.ttf") format("truetype");
+  src: url("/fonts/Wotham.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,4 +19,9 @@
   --color-title-green: #266f3c;
   --color-title-red: #860225;
   --color-background-green: #e0ece6;
+  --color-background-yellow: #ece7d6;
+
+  --background-image-elephants: url("/src/assets/elephants.svg");
+  --background-image-peacock: url("/src/assets/peacock.svg");
+  --background-image-birds-of-paradise: url("/src/assets/birds-of-paradise.svg");
 }

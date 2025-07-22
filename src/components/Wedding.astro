@@ -1,6 +1,9 @@
 ---
 import proposalPic from "../../public/proposal.jpg";
+import TimelineCard from "./TimelineCard.astro";
 import WhenAndWhere from "./WhenAndWhere.astro";
+import elephants from "../assets/elephants.svg";
+import peacock from "../assets/peacock.svg";
 ---
 
 <div class="flex flex-col">
@@ -15,4 +18,66 @@ import WhenAndWhere from "./WhenAndWhere.astro";
     class="h-36 w-full md:h-44"
   />
   <WhenAndWhere />
+  <div
+    class="h-5 justify-center flex flex-row bg-[url('/src/assets/drum.svg')] mx-32 bg-repeat-space"
+  >
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <TimelineCard
+      bgColor="yellow"
+      dayOfWeek="Saturday"
+      date="04.07"
+      eventName="Amalfi night"
+      location="Kigwa Farm"
+      address="QRJQ+862, Nairobi"
+      time="3pm - 9pm"
+      description="Mehndi night with a twist (of lemons)! Kick off the wedding festivities with pizza, pasta, and booze if you’re feeling zesty."
+      dressCode="Summer vibes or Indian casual"
+      backgroundImage="elephants"
+      backgroundPosition="bottom"
+    />
+
+    <TimelineCard
+      bgColor="green"
+      dayOfWeek="Sunday"
+      date="05.07"
+      eventName="Random shit"
+      location="Kigwa Farm"
+      address="QRJQ+862, Nairobi"
+      time="8am - 2pm"
+      description="Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me."
+      dressCode="Casual clothes that you don’t mind getting ruined!"
+      backgroundImage="peacock"
+      backgroundPosition="right"
+    />
+
+    <TimelineCard
+      bgColor="yellow"
+      dayOfWeek="Monday"
+      date="06.07"
+      eventName="Wedding"
+      location="Jalaram Mandir"
+      address="19 Ring Road, Nairobi"
+      time="9am - 2pm"
+      description="Hindu ceremony kickstarting with Nain’s Baraat and ending with a good meal."
+      dressCode="Formal Indian (or Western if you’re boring/white)"
+      backgroundImage="elephants"
+      backgroundPosition="bottom"
+    />
+
+    <TimelineCard
+      bgColor="green"
+      dayOfWeek="Monday"
+      date="06.07"
+      eventName="Reception"
+      location="Kigwa Farm"
+      address="QRJQ+862, Nairobi"
+      time="6pm - Late"
+      description="The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing."
+      dressCode="Bring your best party gear"
+      backgroundImage="birds-of-paradise"
+      backgroundPosition="left"
+    />
+  </div>
 </div>

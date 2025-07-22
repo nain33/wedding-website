@@ -1,0 +1,89 @@
+---
+import calendarIcon from "../assets/calendar.svg";
+import directionsIcon from "../assets/directions.svg";
+import elephantsImg from "../assets/elephants.svg";
+import peacock from "../assets/peacock.svg";
+import birdsOfParadise from "../assets/birds-of-paradise.svg";
+
+interface Props {
+  bgColor: "green" | "yellow";
+  dayOfWeek: string;
+  date: string;
+  eventName: string;
+  location: string;
+  address: string;
+  time: string;
+  description: string;
+  dressCode: string;
+  backgroundImage: "elephants" | "peacock" | "birds-of-paradise";
+  backgroundPosition: "bottom" | "left" | "right";
+}
+
+const {
+  bgColor,
+  dayOfWeek,
+  date,
+  eventName,
+  location,
+  address,
+  time,
+  description,
+  dressCode,
+  backgroundImage,
+  backgroundPosition,
+} = Astro.props;
+
+const bgColorVariants = {
+  green: "bg-background-green",
+  yellow: "bg-background-yellow",
+};
+
+const bgPositionVariants = {
+  bottom: "bg-bottom",
+  left: "bg-left",
+  right: "bg-right",
+};
+
+const backgroundImageVariants = {
+  elephants: "bg-elephants",
+  peacock: "bg-peacock",
+  "birds-of-paradise": "bg-birds-of-paradise",
+};
+---
+
+<div
+  class:list={[
+    `h-[186px] px-10 bg-no-repeat`,
+    bgColorVariants[bgColor],
+    bgPositionVariants[backgroundPosition],
+    backgroundImageVariants[backgroundImage],
+  ]}
+>
+  <div class="flex flex-col items-center">
+    <div class="font-wotham text-xl text-title-red">{dayOfWeek}</div>
+    <div class="font-wotham text-xl -mt-2">{date}</div>
+
+    <div class="flex flex-row w-full justify-between">
+      <div class="flex flex-col justify-start items-center">
+        <div class="font-wotham text-[28px] text-title-red">
+          {eventName}
+        </div>
+        <div class="font-domine text-[15px]">{location}</div>
+        <div class="font-domine text-[10px]">{address}</div>
+        <div class="font-domine text-[10px]">{time}</div>
+      </div>
+      <div class="w-0.25 h-20 bg-black justify-center items-center"></div>
+      <div
+        class="flex flex-col w-[154px] justify-end items-center font-domine text-[8px] text-center"
+      >
+        <div>{description}</div>
+        <br /> Dress code
+        <div>{dressCode}</div>
+        <div class="flex flex-row">
+          <img src={calendarIcon.src} alt="Calendar Icon" class="w-4 h-4" />
+          <img src={directionsIcon.src} alt="Directions Icon" class="w-4 h-4" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
