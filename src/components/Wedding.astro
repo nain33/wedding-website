@@ -2,8 +2,7 @@
 import proposalPic from "../../public/proposal.jpg";
 import TimelineCard from "./TimelineCard.astro";
 import WhenAndWhere from "./WhenAndWhere.astro";
-import elephants from "../assets/elephants.svg";
-import peacock from "../assets/peacock.svg";
+import RSVPCard from "./RSVPCard.astro";
 ---
 
 <div class="flex flex-col">
@@ -38,6 +37,7 @@ import peacock from "../assets/peacock.svg";
       backgroundPosition="bottom"
     />
 
+    <!-- TODO: Peacock feather is not fully aligned right -->
     <TimelineCard
       bgColor="green"
       dayOfWeek="Sunday"
@@ -79,5 +79,12 @@ import peacock from "../assets/peacock.svg";
       backgroundImage="birds-of-paradise"
       backgroundPosition="left"
     />
+
+    <div
+      class="h-8 justify-center flex flex-row bg-[url('/src/assets/dandiya-ladies.svg')] mx-32 bg-repeat-space"
+    >
+    </div>
+
+    <RSVPCard />
   </div>
 </div>
