@@ -1,9 +1,6 @@
 ---
 import calendarIcon from "../assets/calendar.svg";
 import directionsIcon from "../assets/directions.svg";
-import elephantsImg from "../assets/elephants.svg";
-import peacock from "../assets/peacock.svg";
-import birdsOfParadise from "../assets/birds-of-paradise.svg";
 
 interface Props {
   bgColor: "green" | "yellow";
@@ -53,7 +50,7 @@ const backgroundImageVariants = {
 
 <div
   class:list={[
-    `h-[205px] px-5 py-0.5 bg-no-repeat`,
+    `h-[205px] px-5 pt-2 bg-no-repeat`,
     bgColorVariants[bgColor],
     bgPositionVariants[backgroundPosition],
     backgroundImageVariants[backgroundImage],

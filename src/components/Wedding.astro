@@ -1,7 +1,7 @@
 ---
 import proposalPic from "../../public/proposal.jpg";
 import TimelineCard from "./TimelineCard.astro";
-import WhenAndWhere from "./WhenAndWhere.astro";
+import WhenAndWhere from "./WhenAndWhere.vue";
 import RSVPCard from "./RSVPCard.astro";
 ---
 
@@ -16,7 +16,7 @@ import RSVPCard from "./RSVPCard.astro";
     alt="Proposal Picture"
     class="h-36 w-full md:h-44"
   />
-  <WhenAndWhere />
+  <WhenAndWhere client:load />
   <div
     class="h-5 justify-center flex flex-row bg-[url('/src/assets/drum.svg')] mx-32 bg-repeat-space"
   >
