@@ -53,7 +53,7 @@ const backgroundImageVariants = {
 
 <div
   class:list={[
-    `h-[186px] px-10 bg-no-repeat`,
+    `h-[186px] px-5 py-0.5 bg-no-repeat`,
     bgColorVariants[bgColor],
     bgPositionVariants[backgroundPosition],
     backgroundImageVariants[backgroundImage],
@@ -63,7 +63,7 @@ const backgroundImageVariants = {
     <div class="font-wotham text-xl text-title-red">{dayOfWeek}</div>
     <div class="font-wotham text-xl -mt-2">{date}</div>
 
-    <div class="flex flex-row w-full justify-between">
+    <div class="grid grid-cols-[1fr_0.1fr_1fr] w-full items-start">
       <div class="flex flex-col justify-start items-center">
         <div class="font-wotham text-[28px] text-title-red">
           {eventName}
@@ -72,12 +72,14 @@ const backgroundImageVariants = {
         <div class="font-domine text-[10px]">{address}</div>
         <div class="font-domine text-[10px]">{time}</div>
       </div>
-      <div class="w-0.25 h-20 bg-black justify-center items-center"></div>
+
+      <div class="w-0.25 h-20 bg-black mx-auto"></div>
+
       <div
-        class="flex flex-col w-[154px] justify-end items-center font-domine text-[8px] text-center"
+        class="flex flex-col justify-end items-center font-domine text-[8px] text-center"
       >
-        <div>{description}</div>
-        <br /> Dress code
+        <div class="mb-2">{description}</div>
+        Dress code
         <div>{dressCode}</div>
         <div class="flex flex-row">
           <img src={calendarIcon.src} alt="Calendar Icon" class="w-4 h-4" />
