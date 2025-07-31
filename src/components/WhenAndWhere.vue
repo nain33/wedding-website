@@ -43,15 +43,15 @@ setInterval(countdown, 1000);
 
 <template>
   <div
-    class="h-[136px] bg-background-green px-10 flex flex-row items-center justify-between"
+    class="h-[150px] bg-background-green px-10 flex flex-row items-center justify-between"
   >
     <div class="flex flex-col justify-start">
-      <div class="text-title-red text-[28px] font-wotham">When</div>
+      <div class="text-title-red text-[30px] font-wotham">When</div>
       <hr class="w-3 -mt-2 mb-3 m-auto text-title-red" />
-      <div class="font-domine text-xs">06.07.2026</div>
+      <div class="font-domine text-sm">06.07.2026</div>
     </div>
     <div
-      class="border bg-[#C4DCD0] flex flex-col font-dancing-script text-xs px-6 py-2 text-center gap-1"
+      class="border bg-[#C4DCD0] flex flex-col font-dancing-script text-sm px-6 py-2 text-center gap-1"
     >
       <span>{{ daysToGo }} days to go</span>
       <span>{{ hoursToGo }} hours</span>
@@ -59,9 +59,9 @@ setInterval(countdown, 1000);
       <span>{{ secondsToGo }} seconds</span>
     </div>
     <div class="flex flex-col justify-end text-center">
-      <div class="text-title-red text-[28px] font-wotham">Where</div>
+      <div class="text-title-red text-[30px] font-wotham">Where</div>
       <hr class="w-3 -mt-2 mb-3 mx-auto text-title-red" />
-      <div class="font-domine text-xs">
+      <div class="font-domine text-sm">
         Nairobi <br />
         Kenya
       </div>
