@@ -3,6 +3,7 @@ import proposalPic from "../../public/proposal.jpg";
 import TimelineCard from "./TimelineCard.astro";
 import WhenAndWhere from "./WhenAndWhere.vue";
 import RSVPCard from "./RSVPCard.astro";
+import TravelAndAccomodationCard from "./TravelAndAccomodationCard.astro";
 ---
 
 <div class="flex flex-col">
@@ -16,13 +17,14 @@ import RSVPCard from "./RSVPCard.astro";
     alt="Proposal Picture"
     class="h-36 w-full md:h-44"
   />
-  <WhenAndWhere client:load />
-  <div
-    class="h-5 justify-center flex flex-row bg-[url('/src/assets/drum.svg')] mx-32 bg-repeat-space"
-  >
-  </div>
-
   <div class="flex flex-col gap-1">
+    <WhenAndWhere client:load />
+    <!--TODO: Not sure about these drums, maybe need another img -->
+    <div
+      class="h-8 justify-center flex flex-row bg-[url('/src/assets/drum.svg')] mx-32 bg-repeat-space"
+    >
+    </div>
+
     <TimelineCard
       bgColor="yellow"
       dayOfWeek="Saturday"
@@ -37,7 +39,6 @@ import RSVPCard from "./RSVPCard.astro";
       backgroundPosition="bottom"
     />
 
-    <!-- TODO: Peacock feather is not fully aligned right -->
     <TimelineCard
       bgColor="green"
       dayOfWeek="Sunday"
@@ -86,5 +87,6 @@ import RSVPCard from "./RSVPCard.astro";
     </div>
 
     <RSVPCard />
+    <TravelAndAccomodationCard />
   </div>
 </div>
