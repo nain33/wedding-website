@@ -43,7 +43,7 @@ setInterval(countdown, 1000);
 
 <template>
   <div
-    class="h-[150px] bg-background-green px-10 flex flex-row items-center justify-between"
+    class="h-[150px] bg-background-green px-8 xs:px-10 flex flex-row items-center justify-between"
   >
     <div class="flex flex-col justify-start">
       <div class="text-title-red text-[30px] font-wotham">When</div>

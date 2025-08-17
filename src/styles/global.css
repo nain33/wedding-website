@@ -26,4 +26,6 @@
   --background-image-birds-of-paradise: url("/src/assets/birds-of-paradise.svg");
   --background-image-lions: url("/src/assets/lions.svg");
   --background-image-birds: url("/src/assets/birds.svg");
+
+  --breakpoint-xs: 25rem;
 }

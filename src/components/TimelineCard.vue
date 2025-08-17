@@ -34,7 +34,7 @@ const showCalendarSelection = ref(false);
 
 <template>
   <div
-    class="h-[250px] px-5 pt-2 bg-no-repeat"
+    class="h-[250px] px-3 xs:px-5 pt-2 bg-no-repeat"
     :class="[
       bgColorVariants[bgColor],
       bgPositionVariants[backgroundPosition],
@@ -61,7 +61,7 @@ const showCalendarSelection = ref(false);
           <div class="w-0.25 h-25 self-center bg-black mx-auto"></div>
 
           <div
-            class="flex flex-col items-center self-center font-domine text-[10px] text-center"
+            class="flex flex-col items-center self-center font-domine text-[8px] xs:text-[10px] text-center"
           >
             <div class="mb-2">{{ event.description }}</div>
             Dress code
