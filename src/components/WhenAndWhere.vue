@@ -4,22 +4,22 @@ import { ref } from "vue";
 const weddingDate = new Date("2026-07-06T09:00:00Z");
 const now = new Date();
 let daysToGo = ref(
-  Math.floor((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+  Math.floor((weddingDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)),
 );
 
 let hoursToGo = ref(
   Math.floor(
     ((weddingDate.getTime() - now.getTime()) % (1000 * 60 * 60 * 24)) /
-      (1000 * 60 * 60)
-  )
+      (1000 * 60 * 60),
+  ),
 );
 let minutesToGo = ref(
   Math.floor(
-    ((weddingDate.getTime() - now.getTime()) % (1000 * 60 * 60)) / (1000 * 60)
-  )
+    ((weddingDate.getTime() - now.getTime()) % (1000 * 60 * 60)) / (1000 * 60),
+  ),
 );
 let secondsToGo = ref(
-  Math.floor(((weddingDate.getTime() - now.getTime()) % (1000 * 60)) / 1000)
+  Math.floor(((weddingDate.getTime() - now.getTime()) % (1000 * 60)) / 1000),
 );
 
 //TODO: There must be a simpler maths solution to get the numbers
@@ -28,7 +28,7 @@ const countdown = () => {
 
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
   );
   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
@@ -43,15 +43,15 @@ setInterval(countdown, 1000);
 
 <template>
   <div
-    class="h-[150px] bg-background-green px-8 xs:px-10 flex flex-row items-center justify-between"
+    class="bg-background-green xs:px-10 flex h-[150px] flex-row items-center justify-between px-8"
   >
     <div class="flex flex-col justify-start">
-      <div class="text-title-red text-[30px] font-wotham">When</div>
-      <hr class="w-3 -mt-2 mb-3 m-auto text-title-red" />
+      <div class="text-title-red font-wotham text-[30px]">When</div>
+      <hr class="text-title-red m-auto -mt-2 mb-3 w-3" />
       <div class="font-domine text-sm">06.07.2026</div>
     </div>
     <div
-      class="border bg-[#C4DCD0] flex flex-col font-dancing-script text-sm px-6 py-2 text-center gap-1"
+      class="font-dancing-script flex flex-col gap-1 border bg-[#C4DCD0] px-6 py-2 text-center text-sm"
     >
       <span>{{ daysToGo }} days to go</span>
       <span>{{ hoursToGo }} hours</span>
@@ -59,8 +59,8 @@ setInterval(countdown, 1000);
       <span>{{ secondsToGo }} seconds</span>
     </div>
     <div class="flex flex-col justify-end text-center">
-      <div class="text-title-red text-[30px] font-wotham">Where</div>
-      <hr class="w-3 -mt-2 mb-3 mx-auto text-title-red" />
+      <div class="text-title-red font-wotham text-[30px]">Where</div>
+      <hr class="text-title-red mx-auto -mt-2 mb-3 w-3" />
       <div class="font-domine text-sm">
         Nairobi <br />
         Kenya

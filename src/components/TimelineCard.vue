@@ -34,23 +34,23 @@ const showCalendarSelection = ref(false);
 
 <template>
   <div
-    class="h-[250px] px-3 xs:px-5 pt-2 bg-no-repeat"
+    class="xs:px-5 h-[250px] bg-no-repeat px-3 pt-2"
     :class="[
       bgColorVariants[bgColor],
       bgPositionVariants[backgroundPosition],
       backgroundImageVariants[backgroundImage],
     ]"
   >
-    <div class="flex flex-col items-center h-full relative">
-      <div class="font-wotham text-xl text-title-red">
+    <div class="relative flex h-full flex-col items-center">
+      <div class="font-wotham text-title-red text-xl">
         {{ event.dayOfWeek }}
       </div>
-      <div class="font-wotham text-xl -mt-2 mb-2">{{ event.date }}</div>
+      <div class="font-wotham -mt-2 mb-2 text-xl">{{ event.date }}</div>
 
       <div class="absolute inset-0 flex items-center justify-center">
-        <div class="grid grid-cols-[1fr_0.1fr_1fr] w-full">
-          <div class="flex flex-col self-center items-center">
-            <div class="font-wotham text-[30px] text-title-red">
+        <div class="grid w-full grid-cols-[1fr_0.1fr_1fr]">
+          <div class="flex flex-col items-center self-center">
+            <div class="font-wotham text-title-red text-[30px]">
               {{ event.eventName }}
             </div>
             <div class="font-domine text-[17px]">{{ event.location }}</div>
@@ -58,33 +58,33 @@ const showCalendarSelection = ref(false);
             <div class="font-domine text-[12px]">{{ event.time }}</div>
           </div>
 
-          <div class="w-0.25 h-25 self-center bg-black mx-auto"></div>
+          <div class="mx-auto h-25 w-0.25 self-center bg-black"></div>
 
           <div
-            class="flex flex-col items-center self-center font-domine text-[8px] xs:text-[10px] text-center"
+            class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px]"
           >
             <div class="mb-2">{{ event.description }}</div>
             Dress code
             <div>{{ event.dressCode }}</div>
-            <div class="flex flex-row mt-2 gap-1">
+            <div class="mt-2 flex flex-row gap-1">
               <button
                 @click="showCalendarSelection = true"
-                class="flex flex-row items-center border-title-red border rounded-full px-2 py-0.5 gap-0.5 text-title-red"
+                class="border-title-red text-title-red flex flex-row items-center gap-0.5 rounded-full border px-2 py-0.5"
               >
                 <img
                   :src="calendarIcon.src"
                   alt="Calendar Icon"
-                  class="w-4 h-4"
+                  class="h-4 w-4"
                 />
                 <span>Add to cal</span>
               </button>
               <button
-                class="flex flex-row items-center border-title-red border rounded-full px-2 py-0.5 gap-0.5 text-title-red"
+                class="border-title-red text-title-red flex flex-row items-center gap-0.5 rounded-full border px-2 py-0.5"
               >
                 <img
                   :src="directionsIcon.src"
                   alt="Directions Icon"
-                  class="w-4 h-4"
+                  class="h-4 w-4"
                 />
                 <span>Directions</span>
               </button>

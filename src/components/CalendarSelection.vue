@@ -42,34 +42,34 @@ onMounted(() => {
 <template>
   <div
     id="calendar-selection"
-    class="fixed bottom-0 h-56 w-full bg-[#C4DCD0] flex flex-col items-center pt-2 z-10"
+    class="fixed bottom-0 z-10 flex h-56 w-full flex-col items-center bg-[#C4DCD0] pt-2"
   >
-    <div class="font-wotham text-[30px] text-title-red">
+    <div class="font-wotham text-title-red text-[30px]">
       {{ title }}
     </div>
-    <div class="mt-5 gap-2 flex flex-col w-3/4">
+    <div class="mt-5 flex w-3/4 flex-col gap-2">
       <button
         @click="openCalendar('google')"
-        class="rounded-full w-full border border-[#860225] h-8 flex items-center justify-center"
+        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
       >
-        <img :src="googleImg.src" class="inline-block h-4 mr-1.5" />
+        <img :src="googleImg.src" class="mr-1.5 inline-block h-4" />
         Google
       </button>
       <button
         @click="openCalendar('apple')"
-        class="rounded-full w-full border border-[#860225] h-8 flex items-center justify-center"
+        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
       >
-        <img :src="appleImg.src" class="inline-block h-4 mr-1.5" />
+        <img :src="appleImg.src" class="mr-1.5 inline-block h-4" />
         Apple
       </button>
       <button
         @click="openCalendar('outlook')"
-        class="rounded-full w-full border border-[#860225] h-8 flex items-center justify-center"
+        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
       >
-        <img :src="outlookImg.src" class="inline-block h-4 mr-1.5" />
+        <img :src="outlookImg.src" class="mr-1.5 inline-block h-4" />
         Outlook
       </button>
-      <button @click="emit('close')" class="self-center font-domine text-xs">
+      <button @click="emit('close')" class="font-domine self-center text-xs">
         Cancel
       </button>
     </div>
