@@ -16,6 +16,7 @@ export type Event = {
   description: string;
   dressCode: string;
   calendarEvent: EventCalendar;
+  directionsLink: string;
 };
 
 const weddingCalendar: EventCalendar = {
@@ -64,6 +65,7 @@ export const amalfiNight: Event = {
     "Mehndi night with a twist (of lemons)! Kick off the wedding festivities with pizza, pasta, and booze if you’re feeling zesty.",
   dressCode: "Summer vibes or Indian casual",
   calendarEvent: amalfiNightCalendar,
+  directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
 };
 
 export const randomShit: Event = {
@@ -77,6 +79,7 @@ export const randomShit: Event = {
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",
   dressCode: "Casual clothes that you don’t mind getting ruined!",
   calendarEvent: randomShitCalendar,
+  directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
 };
 
 export const wedding: Event = {
@@ -90,6 +93,7 @@ export const wedding: Event = {
     "Hindu ceremony kickstarting with Nain’s Baraat and ending with a good meal.",
   dressCode: "Formal Indian (or Western if you’re boring/white)",
   calendarEvent: weddingCalendar,
+  directionsLink: "https://maps.app.goo.gl/C6q1KzfmMf4LgUSK9",
 };
 
 export const reception: Event = {
@@ -103,4 +107,5 @@ export const reception: Event = {
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
   dressCode: "Bring your best party gear",
   calendarEvent: receptionCalendar,
+  directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
 };

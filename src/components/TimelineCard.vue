@@ -5,7 +5,7 @@ import directionsIcon from "../assets/directions.svg";
 import CalendarSelection from "./CalendarSelection.vue";
 import type { Event } from "../eventInfo";
 
-defineProps<{
+const props = defineProps<{
   event: Event;
   bgColor: "green" | "yellow";
   backgroundImage: "elephants" | "peacock" | "birds-of-paradise";
@@ -30,6 +30,10 @@ const backgroundImageVariants = {
 };
 
 const showCalendarSelection = ref(false);
+
+const goToDirectionsLink = () => {
+  window.open(props.event.directionsLink, "_blank");
+};
 </script>
 
 <template>
@@ -79,6 +83,7 @@ const showCalendarSelection = ref(false);
                 <span>Add to cal</span>
               </button>
               <button
+                @click="goToDirectionsLink"
                 class="border-title-red text-title-red flex flex-row items-center gap-0.5 rounded-full border px-2 py-0.5"
               >
                 <img
