@@ -20,10 +20,12 @@ const speed = 1.0;
   window.addEventListener("DOMContentLoaded", () => {
     new SpiderController({
       maxBugs: 1,
-      minSpeed: 8,
+      minSpeed: 100,
+      maxSpeed: 100,
       //   bugWidth: 16,
       //   bugHeight: 17,
       canDie: false,
+      minDelay: 5000,
     });
   });
 </script>
