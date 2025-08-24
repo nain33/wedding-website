@@ -1,0 +1,29 @@
+---
+/**
+ * Spiders.astro
+ * Drop this component anywhere to make spiders crawl across the screen.
+ *
+ * Props:
+ * - amount: number of bugs (default: 3)
+ * - type: "spider" | "fly" (default: "spider")
+ * - speed: movement speed multiplier (default: 1.0)
+ */
+const amount = 3;
+const type = "spider";
+const speed = 1.0;
+---
+
+<!-- Load the bug.js script from /public -->
+<script is:inline src="/bug.js"></script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    new SpiderController({
+      maxBugs: 1,
+      minSpeed: 8,
+      //   bugWidth: 16,
+      //   bugHeight: 17,
+      canDie: false,
+    });
+  });
+</script>
