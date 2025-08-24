@@ -43,25 +43,25 @@ setInterval(countdown, 1000);
 
 <template>
   <div
-    class="bg-background-green xs:px-10 flex h-[150px] flex-row items-center justify-between px-8"
+    class="bg-background-green xs:px-10 m-auto flex h-[150px] flex-row items-center justify-between px-8 md:h-[350px] md:w-3/4"
   >
-    <div class="flex flex-col justify-start">
-      <div class="text-title-red font-wotham text-[30px]">When</div>
+    <div class="m-auto flex flex-col justify-start text-center">
+      <div class="text-title-red font-wotham text-3xl md:text-5xl">When</div>
       <hr class="text-title-red m-auto -mt-2 mb-3 w-3" />
-      <div class="font-domine text-sm">06.07.2026</div>
+      <div class="font-domine text-sm md:text-lg">06.07.2026</div>
     </div>
     <div
-      class="font-dancing-script flex flex-col gap-1 border bg-[#C4DCD0] px-6 py-2 text-center text-sm"
+      class="font-dancing-script flex flex-col gap-1 border bg-[#C4DCD0] px-6 py-2 text-center text-sm md:gap-2 md:text-3xl"
     >
       <span>{{ daysToGo }} days to go</span>
       <span>{{ hoursToGo }} hours</span>
       <span>{{ minutesToGo }} minutes</span>
       <span>{{ secondsToGo }} seconds</span>
     </div>
-    <div class="flex flex-col justify-end text-center">
-      <div class="text-title-red font-wotham text-[30px]">Where</div>
+    <div class="m-auto flex flex-col justify-end text-center">
+      <div class="text-title-red font-wotham text-3xl md:text-5xl">Where</div>
       <hr class="text-title-red mx-auto -mt-2 mb-3 w-3" />
-      <div class="font-domine text-sm">
+      <div class="font-domine text-sm md:text-lg">
         Nairobi <br />
         Kenya
       </div>

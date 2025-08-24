@@ -50,26 +50,29 @@ onMounted(() => {
     <div class="mt-5 flex w-3/4 flex-col gap-2">
       <button
         @click="openCalendar('google')"
-        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
+        class="flex h-8 w-full cursor-pointer items-center justify-center rounded-full border border-[#860225]"
       >
         <img :src="googleImg.src" class="mr-1.5 inline-block h-4" />
         Google
       </button>
       <button
         @click="openCalendar('apple')"
-        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
+        class="flex h-8 w-full cursor-pointer items-center justify-center rounded-full border border-[#860225]"
       >
         <img :src="appleImg.src" class="mr-1.5 inline-block h-4" />
         Apple
       </button>
       <button
         @click="openCalendar('outlook')"
-        class="flex h-8 w-full items-center justify-center rounded-full border border-[#860225]"
+        class="flex h-8 w-full cursor-pointer items-center justify-center rounded-full border border-[#860225]"
       >
         <img :src="outlookImg.src" class="mr-1.5 inline-block h-4" />
         Outlook
       </button>
-      <button @click="emit('close')" class="font-domine self-center text-xs">
+      <button
+        @click="emit('close')"
+        class="font-domine cursor-pointer self-center text-xs"
+      >
         Cancel
       </button>
     </div>

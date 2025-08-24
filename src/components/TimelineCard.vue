@@ -38,7 +38,7 @@ const goToDirectionsLink = () => {
 
 <template>
   <div
-    class="xs:px-5 h-[250px] bg-no-repeat px-3 pt-2"
+    class="xs:px-5 h-[250px] bg-no-repeat px-3 pt-2 md:h-[350px] md:px-2"
     :class="[
       bgColorVariants[bgColor],
       bgPositionVariants[backgroundPosition],
@@ -46,26 +46,34 @@ const goToDirectionsLink = () => {
     ]"
   >
     <div class="relative flex h-full flex-col items-center">
-      <div class="font-wotham text-title-red text-xl">
+      <div class="font-wotham text-title-red text-xl md:text-3xl">
         {{ event.dayOfWeek }}
       </div>
-      <div class="font-wotham -mt-2 mb-2 text-xl">{{ event.date }}</div>
+      <div class="font-wotham -mt-2 mb-2 text-xl md:mb-5 md:text-3xl">
+        {{ event.date }}
+      </div>
 
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="grid w-full grid-cols-[1fr_0.1fr_1fr]">
           <div class="flex flex-col items-center self-center">
-            <div class="font-wotham text-title-red text-[30px]">
+            <div class="font-wotham text-title-red text-3xl md:text-5xl">
               {{ event.eventName }}
             </div>
-            <div class="font-domine text-[17px]">{{ event.location }}</div>
-            <div class="font-domine text-[12px]">{{ event.address }}</div>
-            <div class="font-domine text-[12px]">{{ event.time }}</div>
+            <div class="font-domine text-[17px] md:text-[24px]">
+              {{ event.location }}
+            </div>
+            <div class="font-domine text-[12px] md:text-[19px]">
+              {{ event.address }}
+            </div>
+            <div class="font-domine text-[12px] md:text-[19px]">
+              {{ event.time }}
+            </div>
           </div>
 
           <div class="mx-auto h-25 w-0.25 self-center bg-black"></div>
 
           <div
-            class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px]"
+            class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px] md:text-[16px]"
           >
             <div class="mb-2">{{ event.description }}</div>
             Dress code
@@ -73,7 +81,7 @@ const goToDirectionsLink = () => {
             <div class="mt-2 flex flex-row gap-1">
               <button
                 @click="showCalendarSelection = true"
-                class="border-title-red text-title-red flex flex-row items-center gap-0.5 rounded-full border px-2 py-0.5"
+                class="border-title-red text-title-red flex cursor-pointer flex-row items-center gap-0.5 rounded-full border px-2 py-0.5 md:gap-2 md:px-4"
               >
                 <img
                   :src="calendarIcon.src"
@@ -84,7 +92,7 @@ const goToDirectionsLink = () => {
               </button>
               <button
                 @click="goToDirectionsLink"
-                class="border-title-red text-title-red flex flex-row items-center gap-0.5 rounded-full border px-2 py-0.5"
+                class="border-title-red text-title-red flex cursor-pointer flex-row items-center gap-0.5 rounded-full border px-2 py-0.5 md:gap-2 md:px-4"
               >
                 <img
                   :src="directionsIcon.src"

@@ -19,6 +19,7 @@ export type Event = {
   directionsLink: string;
 };
 
+//TODO: Update these times so they're reflected as the correct times in UTC. Currently have them as Nairobi time
 const weddingCalendar: EventCalendar = {
   title: "Nain and Niki's Wedding",
   start: new Date("2026-07-06T06:00:00Z"),
@@ -38,8 +39,8 @@ const amalfiNightCalendar: EventCalendar = {
 
 const randomShitCalendar: EventCalendar = {
   title: "Random shit",
-  start: new Date("2026-07-05T08:00:00Z"),
-  end: new Date("2026-07-05T14:00:00Z"),
+  start: new Date("2026-07-05T06:00:00Z"),
+  end: new Date("2026-07-05T11:00:00Z"),
   location: "QRJQ+862, Nairobi",
   description:
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",

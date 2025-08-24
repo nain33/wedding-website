@@ -8,73 +8,83 @@ import TravelAndAccomodationCard from "./TravelAndAccomodationCard.astro";
 import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
 ---
 
-<div class="flex flex-col">
+<div class="flex h-full flex-col">
   <div
-    class="font-dancing-script text-title-green flex items-center justify-center text-[40px]"
+    class="bg-white/75 bg-[url('src/assets/diya_background.jpeg')] bg-contain bg-blend-lighten"
   >
-    Nainesh & Nikita
-  </div>
-  <img
-    src={proposalPic.src}
-    alt="Proposal Picture"
-    class="h-36 w-full md:h-44"
-  />
-  <div class="flex flex-col gap-1">
-    <WhenAndWhere client:load />
-    <!--TODO: Not sure about these drums, maybe need another img -->
     <div
-      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/drum.svg')] bg-repeat-space"
+      class="font-dancing-script text-title-green flex items-center justify-center text-[40px] md:py-2.5 md:text-6xl"
+    >
+      Nainesh & Nikita
+    </div>
+    <div class="flex items-center justify-center text-center">
+      YO ADD SOME LINKS HERE BRO
+    </div>
+    <img
+      src={proposalPic.src}
+      alt="Proposal Picture"
+      class="m-auto h-36 w-full md:h-96 md:w-3/4"
+    />
+    <WhenAndWhere client:load />
+  </div>
+
+  <!--TODO: Not sure about these drums, maybe need another img -->
+  <div class="flex flex-col gap-1">
+    <div
+      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-center bg-repeat-space md:mx-96 md:h-12"
     >
     </div>
+    <!-- <div class="mb-6"></div> -->
 
-    <TimelineCard
-      event={amalfiNight}
-      bgColor="yellow"
-      backgroundImage="elephants"
-      backgroundPosition="bottom"
-      client:load
-    />
+    <div class="md:grid md:grid-cols-2 md:gap-6">
+      <TimelineCard
+        event={amalfiNight}
+        bgColor="yellow"
+        backgroundImage="elephants"
+        backgroundPosition="bottom"
+        client:load
+      />
 
-    <TimelineCard
-      event={randomShit}
-      bgColor="green"
-      backgroundImage="peacock"
-      backgroundPosition="right"
-      client:load
-    />
+      <TimelineCard
+        event={randomShit}
+        bgColor="green"
+        backgroundImage="peacock"
+        backgroundPosition="right"
+        client:load
+      />
 
-    <TimelineCard
-      event={wedding}
-      bgColor="yellow"
-      backgroundImage="elephants"
-      backgroundPosition="bottom"
-      client:load
-    />
+      <TimelineCard
+        event={wedding}
+        bgColor="yellow"
+        backgroundImage="elephants"
+        backgroundPosition="bottom"
+        client:load
+      />
 
-    <TimelineCard
-      event={reception}
-      bgColor="green"
-      backgroundImage="birds-of-paradise"
-      backgroundPosition="left"
-      client:load
-    />
-
+      <TimelineCard
+        event={reception}
+        bgColor="green"
+        backgroundImage="birds-of-paradise"
+        backgroundPosition="left"
+        client:load
+      />
+    </div>
     <div
-      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space"
+      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space md:mx-96"
     >
     </div>
 
     <RSVPCard />
 
     <div
-      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space"
+      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space md:mx-96"
     >
     </div>
 
     <TravelAndAccomodationCard />
 
     <div
-      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space"
+      class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-repeat-space md:mx-96"
     >
     </div>
 
