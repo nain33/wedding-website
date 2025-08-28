@@ -38,7 +38,7 @@ const goToDirectionsLink = () => {
 
 <template>
   <div
-    class="xs:px-5 h-[250px] bg-no-repeat px-3 pt-2 md:h-[350px] md:px-2"
+    class="xs:px-5 m-auto h-[250px] w-full bg-no-repeat px-3 pt-2 md:h-[350px] md:rounded-2xl md:border md:px-2"
     :class="[
       bgColorVariants[bgColor],
       bgPositionVariants[backgroundPosition],
