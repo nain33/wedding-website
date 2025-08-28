@@ -17,13 +17,21 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
     >
       Nainesh & Nikita
     </div>
-    <!-- TODO: Make these links work and look nicer -->
-    <div class="flex flex-row items-center justify-center gap-4 text-center">
-      <span>Timeline</span>
-      <span>RSVP</span>
-      <span>Travel and Accomodation</span>
-      <span>Map</span>
+
+    <!-- Original navigation (visible initially) -->
+    <div
+      id="links-original"
+      class="font-domine my-2 flex flex-row items-center justify-center gap-4 text-center text-sm text-gray-400 italic md:text-base"
+    >
+      <a href="#timeline">Timeline</a>
+      <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+      <a href="#rsvp">RSVP</a>
+      <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+      <a href="#travel-and-accommodation">Travel and Accomodation</a>
+      <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+      <a href="#map">Map</a>
     </div>
+
     <img
       src={proposalPic.src}
       alt="Proposal Picture"
@@ -31,6 +39,44 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
     />
     <WhenAndWhere client:load />
   </div>
+
+  <!-- Fixed navigation (hidden initially, shows when original scrolls out) -->
+  <div
+    id="links-fixed"
+    class="font-domine pointer-events-none fixed top-0 right-0 left-0 z-50 flex flex-row items-center justify-center gap-4 bg-white/70 py-2 text-center text-sm text-gray-400 italic opacity-0 backdrop-blur-sm transition-opacity duration-300 md:text-base"
+  >
+    <a href="#timeline">Timeline</a>
+    <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+    <a href="#rsvp">RSVP</a>
+    <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+    <a href="#travel-and-accommodation">Travel and Accomodation</a>
+    <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
+    <a href="#map">Map</a>
+  </div>
+
+  <script>
+    const originalLinks = document.getElementById("links-original");
+    const fixedLinks = document.getElementById("links-fixed");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Original links are visible, hide fixed version
+            fixedLinks?.classList.add("opacity-0", "pointer-events-none");
+          } else {
+            // Original links are not visible, show fixed version
+            fixedLinks?.classList.remove("opacity-0", "pointer-events-none");
+          }
+        });
+      },
+      {
+        threshold: 0,
+      },
+    );
+
+    observer.observe(originalLinks!);
+  </script>
 
   <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#E8E8CC]">
     <!--TODO: Not sure about these drums, maybe need another img -->
@@ -42,7 +88,8 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
       <!-- <div class="mb-6"></div> -->
 
       <div
-        class="flex w-full flex-col gap-1 md:m-auto md:grid md:w-9/10 md:grid-cols-2 md:gap-6"
+        id="timeline"
+        class="flex w-full scroll-mt-14 flex-col gap-1 md:m-auto md:grid md:w-9/10 md:grid-cols-2 md:gap-6"
       >
         <TimelineCard
           event={amalfiNight}
@@ -88,14 +135,14 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
       >
       </div>
 
-      <TravelAndAccomodationCard />
+      <TravelAndAccomodationCard id="travel-and-accommodation" />
 
       <div
         class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-center bg-repeat-space md:mx-96 md:h-12"
       >
       </div>
 
-      <Map />
+      <Map id="map" />
     </div>
   </div>
 </div>
