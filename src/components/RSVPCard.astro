@@ -1,42 +1,52 @@
 <!-- TODO: Change this body to be vertical, no need for the divider and will look better I reckon -->
 <div
   id="rsvp"
-  class="bg-background-yellow bg-lions m-auto h-[154px] w-full scroll-mt-14 bg-bottom bg-no-repeat px-5 pt-2 md:h-[300px] md:w-3/4 md:rounded-2xl md:border"
+  class="bg-background-yellow bg-lions m-auto flex h-full w-full scroll-mt-14 flex-row bg-bottom bg-no-repeat px-2 pt-2 md:w-3/4 md:rounded-2xl md:border"
 >
-  <div class="relative flex h-full flex-col items-center py-2">
-    <div class="font-wotham text-title-red text-xl md:text-3xl">RSVP</div>
+  <img
+    src="/src/assets/tree.svg"
+    alt="RSVP Image"
+    class="flex w-1/4 self-end opacity-40 md:self-stretch"
+  />
+  <div class="flex h-full w-1/2 flex-col items-center pt-2">
+    <div class="font-wotham text-title-red mb-6 text-xl md:text-3xl">RSVP</div>
 
-    <div
-      class="absolute inset-0 grid w-full grid-cols-[1fr_0.1fr_1fr] items-center justify-center"
-      data-testid="rsvp-card"
-    >
+    <div class="flex flex-row">
       <div
-        class="font-domine flex max-w-[111px] items-center justify-self-center text-center text-[15px] md:max-w-full md:text-[22px]"
+        class="flex w-full flex-col items-center justify-center"
+        data-testid="rsvp-card"
       >
-        Please RSVP by 01.03.2026 <!-- TODO: Double check RSVP date -->
-      </div>
+        <div
+          class="font-domine mb-4 flex max-w-[111px] items-center justify-self-center text-center text-[15px] md:max-w-full md:text-[22px]"
+        >
+          Please RSVP by 01.03.2026 <!-- TODO: Double check RSVP date -->
+        </div>
 
-      <div class="mx-auto h-20 w-0.25 self-center bg-black md:h-36"></div>
-
-      <div
-        class="font-domine flex flex-col items-center justify-end text-center text-[10px] md:text-[17px]"
-      >
-        <span class="italic">Whatsapp</span>
-        <span
-          >Nainesh: <a href="https://wa.me/642102424405" class="underline"
-            >+642102424405</a
-          ></span
+        <div
+          class="font-domine mb-16 flex flex-col items-center justify-end text-center text-[12px] md:text-[17px]"
         >
-        <span class="mb-2"
-          >Nikita: <a href="https://wa.me/447807683202" class="underline"
-            >+447807683202</a
-          ></span
-        >
-        <span class="italic">or Email</span>
-        <a href="mailto:nain.niki23@gmail.com" class="underline"
-          >nain.niki23@gmail.com</a
-        >
+          <span class="italic">Whatsapp</span>
+          <span
+            >Nainesh: <a href="https://wa.me/642102424405" class="underline"
+              >+642102424405</a
+            ></span
+          >
+          <span class="mb-2"
+            >Nikita: <a href="https://wa.me/447807683202" class="underline"
+              >+447807683202</a
+            ></span
+          >
+          <span class="italic">or Email</span>
+          <a href="mailto:nain.niki23@gmail.com" class="underline"
+            >nain.niki23@gmail.com</a
+          >
+        </div>
       </div>
     </div>
   </div>
+  <img
+    src="/src/assets/tree.svg"
+    alt="RSVP Image"
+    class="flex w-1/4 self-end opacity-40 md:self-stretch"
+  />
 </div>
