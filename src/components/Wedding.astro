@@ -6,22 +6,29 @@ import RSVPCard from "./RSVPCard.astro";
 import Map from "./Map.astro";
 import TravelAndAccomodationCard from "./TravelAndAccomodationCard.astro";
 import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
+import { Image } from "astro:assets";
+import diyaBackground from "../assets/diya_background.jpeg";
 ---
 
 <div class="flex h-full flex-col">
-  <div
-    class="bg-white/75 bg-[url('src/assets/diya_background.jpeg')] bg-contain bg-blend-lighten"
-  >
+  <div class="relative bg-[#e5e4d2]">
+    <Image
+      src={diyaBackground}
+      alt="Diya Background"
+      class="absolute top-0 left-0 z-0 h-full w-auto object-cover object-left opacity-25"
+      layout="constrained"
+    />
+
+    <!-- All your other content will now be above the image -->
     <div
-      class="font-dancing-script text-title-green flex items-center justify-center text-[40px] md:py-2.5 md:text-6xl"
+      class="font-dancing-script text-title-green relative z-10 flex items-center justify-center text-[40px] md:py-2.5 md:text-6xl"
     >
       Nainesh & Nikita
     </div>
 
-    <!-- Original navigation (visible initially) -->
     <div
+      class="font-domine relative z-10 my-2 flex flex-row items-center justify-center gap-4 text-center text-sm text-gray-400 italic md:text-base"
       id="links-original"
-      class="font-domine my-2 flex flex-row items-center justify-center gap-4 text-center text-sm text-gray-400 italic md:text-base"
     >
       <a href="#timeline">Timeline</a>
       <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
@@ -35,9 +42,18 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
     <img
       src={proposalPic.src}
       alt="Proposal Picture"
-      class="m-auto h-36 w-full md:h-96 md:w-3/4"
+      class="relative z-10 m-auto h-36 w-full md:h-96 md:w-3/4"
     />
-    <WhenAndWhere client:load />
+    <div class="relative z-10">
+      <WhenAndWhere client:load />
+    </div>
+
+    <Image
+      src={diyaBackground}
+      alt="Diya Background"
+      class="absolute top-0 right-0 z-0 h-full w-auto scale-x-[-1] object-cover object-left opacity-25"
+      layout="constrained"
+    />
   </div>
 
   <!-- Fixed navigation (hidden initially, shows when original scrolls out) -->
@@ -77,8 +93,7 @@ import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
 
     observer.observe(originalLinks!);
   </script>
-
-  <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#E8E8CC]">
+  <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#e5e4d2]">
     <!--TODO: Not sure about these drums, maybe need another img -->
     <div class="flex w-full flex-col gap-1">
       <div
