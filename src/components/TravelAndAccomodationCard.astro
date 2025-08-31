@@ -1,3 +1,8 @@
+---
+import star from "../assets/star.svg";
+import Star from "./Star.vue";
+---
+
 <div
   id="travel-and-accommodation"
   class="bg-background-green bg-birds m-auto scroll-mt-14 bg-right bg-no-repeat px-5 pt-2 pb-6 md:w-3/4 md:rounded-2xl md:border md:pt-4"
@@ -45,17 +50,32 @@
         <div class="text-title-red mb-2 text-lg italic md:text-2xl">
           Recommended Hotels
         </div>
-        <div class="flex flex-col text-center text-sm underline md:text-base">
-          <a href="https://www.kingfishernest.com/" target="_blank"
-            >Kingfisher Nest Hotel Suites</a
+        <div
+          class="flex flex-col items-center text-center text-sm underline md:text-base"
+        >
+          <div
+            class="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 text-right"
           >
-          <a href="https://www.trademark-hotel.com/" target="_blank"
-            >Trademark Hotel</a
-          >
-          <a href="https://www.tribe-hotel.com/" target="_blank">Tribe Hotel</a>
-          <a href="https://www.ibisstylesnairobi.com/" target="_blank"
-            >ibis Styles</a
-          >
+            <a href="https://www.ibisstylesnairobi.com/" target="_blank"
+              >ibis Styles</a
+            >
+            <Star numberOfStars={3} />
+
+            <a href="https://www.kingfishernest.com/" target="_blank"
+              >Kingfisher Nest Hotel Suites</a
+            >
+            <Star numberOfStars={4} />
+
+            <a href="https://www.trademark-hotel.com/" target="_blank"
+              >Trademark Hotel</a
+            >
+            <Star numberOfStars={4} />
+
+            <a href="https://www.tribe-hotel.com/" target="_blank"
+              >Tribe Hotel</a
+            >
+            <Star numberOfStars={5} />
+          </div>
         </div>
       </div>
       <div>
@@ -63,7 +83,7 @@
           Recommended Restaurants
         </div>
         <div class="font-domine flex flex-col text-center text-sm md:text-base">
-          <span>Hashmi Barbeque</span>
+          <span>Hashmi Barbeque🍗</span>
           <span>Zen Garden</span>
           <span>Artcaffe Restaurant</span>
           <span>Furusato</span>
