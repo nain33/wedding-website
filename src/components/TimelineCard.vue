@@ -76,9 +76,9 @@ const goToDirectionsLink = () => {
             class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px] md:text-[16px]"
           >
             <div class="mb-2">{{ event.description }}</div>
-            Dress code
+            <span class="italic">Dress code</span>
             <div>{{ event.dressCode }}</div>
-            <div class="mt-2 flex flex-row gap-1">
+            <div class="mt-4 flex flex-row gap-1">
               <button
                 @click="showCalendarSelection = true"
                 class="border-title-red text-title-red flex cursor-pointer flex-row items-center gap-0.5 rounded-full border px-2 py-0.5 md:gap-2 md:px-4"

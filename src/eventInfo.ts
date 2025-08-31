@@ -24,7 +24,7 @@ const weddingCalendar: EventCalendar = {
   title: "Nain and Niki's Wedding",
   start: new Date("2026-07-06T06:00:00Z"),
   end: new Date("2026-07-06T14:00:00Z"),
-  location: "QRJQ+862, Nairobi",
+  location: "19 Ring Road, Nairobi",
   description: "Nain and Niki's wedding",
 };
 
@@ -32,7 +32,7 @@ const amalfiNightCalendar: EventCalendar = {
   title: "Amalfi Night",
   start: new Date("2026-07-04T15:00:00Z"),
   end: new Date("2026-07-04T21:00:00Z"),
-  location: "QRJQ+862, Nairobi",
+  location: "Kiambu Road, Nairobi",
   description:
     "Mehndi night with a twist (of lemons)! Kick off the wedding festivities with pizza, pasta, and booze if you’re feeling zesty.",
 };
@@ -41,7 +41,7 @@ const randomShitCalendar: EventCalendar = {
   title: "Random shit",
   start: new Date("2026-07-05T06:00:00Z"),
   end: new Date("2026-07-05T11:00:00Z"),
-  location: "QRJQ+862, Nairobi",
+  location: "Kiambu Road, Nairobi",
   description:
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",
 };
@@ -50,7 +50,7 @@ const receptionCalendar: EventCalendar = {
   title: "Reception",
   start: new Date("2026-07-06T18:00:00Z"),
   end: new Date("2026-07-06T23:59:59Z"),
-  location: "QRJQ+862, Nairobi",
+  location: "Kiambu Road, Nairobi",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
 };
@@ -60,7 +60,7 @@ export const amalfiNight: Event = {
   date: "04.07",
   eventName: "Amalfi night",
   location: "Kigwa Farm",
-  address: "QRJQ+862, Nairobi",
+  address: "Kiambu Road, Nairobi",
   time: "3pm - 9pm",
   description:
     "Mehndi night with a twist (of lemons)! Kick off the wedding festivities with pizza, pasta, and booze if you’re feeling zesty.",
@@ -74,7 +74,7 @@ export const randomShit: Event = {
   date: "05.07",
   eventName: "Random shit",
   location: "Kigwa Farm",
-  address: "QRJQ+862, Nairobi",
+  address: "Kiambu Road, Nairobi",
   time: "8am - 2pm",
   description:
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",
@@ -92,7 +92,7 @@ export const wedding: Event = {
   time: "9am - 2pm",
   description:
     "Hindu ceremony kickstarting with Nain’s Baraat and ending with a good meal.",
-  dressCode: "Formal Indian (or Western if you’re boring/white)",
+  dressCode: "Formal Indian/Western",
   calendarEvent: weddingCalendar,
   directionsLink: "https://maps.app.goo.gl/C6q1KzfmMf4LgUSK9",
 };
@@ -102,7 +102,7 @@ export const reception: Event = {
   date: "06.07",
   eventName: "Reception",
   location: "Kigwa Farm",
-  address: "QRJQ+862, Nairobi",
+  address: "Kiambu Road, Nairobi",
   time: "6pm - Late",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
