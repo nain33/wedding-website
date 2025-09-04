@@ -8,10 +8,11 @@ import TravelAndAccomodationCard from "./TravelAndAccomodationCard.astro";
 import { amalfiNight, randomShit, reception, wedding } from "../eventInfo";
 import { Image } from "astro:assets";
 import diyaBackground from "../assets/diya_background.jpeg";
+import KigwaFarmMap from "./KigwaFarmMap.astro";
 ---
 
 <div class="flex h-full flex-col">
-  <div class="relative mb-1 md:bg-[#e5e4d2]">
+  <div class="relative md:bg-[#e5e4d2]">
     <Image
       src={diyaBackground}
       alt="Diya Background"
@@ -33,7 +34,7 @@ import diyaBackground from "../assets/diya_background.jpeg";
       <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
       <a href="#rsvp">RSVP</a>
       <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
-      <a href="#travel-and-accommodation">Travel and Accomodation</a>
+      <a href="#travel-and-accommodation">Travel & Accomodation</a>
       <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
       <a href="#map">Map</a>
     </div>
@@ -64,7 +65,7 @@ import diyaBackground from "../assets/diya_background.jpeg";
     <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
     <a href="#rsvp">RSVP</a>
     <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
-    <a href="#travel-and-accommodation">Travel and Accomodation</a>
+    <a href="#travel-and-accommodation">Travel & Accomodation</a>
     <div class="hidden h-4 w-0.25 bg-gray-400 md:block"></div>
     <a href="#map">Map</a>
   </div>
@@ -93,7 +94,7 @@ import diyaBackground from "../assets/diya_background.jpeg";
     observer.observe(originalLinks!);
   </script>
 
-  <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#e5e4d2]">
+  <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#e5e4d2] pt-1">
     <div class="flex w-full flex-col gap-1">
       <!-- <div class="mb-6"></div> -->
       <div
@@ -156,6 +157,11 @@ import diyaBackground from "../assets/diya_background.jpeg";
       </div>
 
       <Map id="map" />
+      <div
+        class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-center bg-repeat-space md:mx-96 md:h-12"
+      >
+      </div>
+      <KigwaFarmMap />
     </div>
   </div>
 </div>

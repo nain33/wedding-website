@@ -38,8 +38,8 @@ const amalfiNightCalendar: EventCalendar = {
 };
 
 const randomShitCalendar: EventCalendar = {
-  title: "Random shit",
-  start: new Date("2026-07-05T06:00:00Z"),
+  title: "Pithi & Mandvo",
+  start: new Date("2026-07-05T07:00:00Z"),
   end: new Date("2026-07-05T11:00:00Z"),
   location: "Kiambu Road, Nairobi",
   description:
@@ -72,13 +72,13 @@ export const amalfiNight: Event = {
 export const randomShit: Event = {
   dayOfWeek: "Sunday",
   date: "05.07",
-  eventName: "Random shit",
+  eventName: "Pithi & Mandvo",
   location: "Kigwa Farm",
   address: "Kiambu Road, Nairobi",
-  time: "8am - 2pm",
+  time: "9am - 2pm",
   description:
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",
-  dressCode: "Casual clothes that you don’t mind getting ruined!",
+  dressCode: "Casual Indian/Western",
   calendarEvent: randomShitCalendar,
   directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
 };
