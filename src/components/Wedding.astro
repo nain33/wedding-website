@@ -11,15 +11,14 @@ import diyaBackground from "../assets/diya_background.jpeg";
 ---
 
 <div class="flex h-full flex-col">
-  <div class="relative bg-[#e5e4d2]">
+  <div class="relative md:bg-[#e5e4d2]">
     <Image
       src={diyaBackground}
       alt="Diya Background"
-      class="absolute top-0 left-0 z-0 h-full w-auto object-cover object-left opacity-25"
+      class="invisible absolute top-0 left-0 z-0 h-full w-auto object-cover object-left opacity-25 md:visible"
       layout="constrained"
     />
 
-    <!-- All your other content will now be above the image -->
     <div
       class="font-dancing-script text-title-green relative z-10 flex items-center justify-center text-[40px] md:py-2.5 md:text-6xl"
     >
@@ -51,7 +50,7 @@ import diyaBackground from "../assets/diya_background.jpeg";
     <Image
       src={diyaBackground}
       alt="Diya Background"
-      class="absolute top-0 right-0 z-0 h-full w-auto scale-x-[-1] object-cover object-left opacity-25"
+      class="invisible absolute top-0 right-0 z-0 h-full w-auto scale-x-[-1] object-cover object-left opacity-25 md:visible"
       layout="constrained"
     />
   </div>
