@@ -42,7 +42,7 @@ onMounted(() => {
 <template>
   <div
     id="calendar-selection"
-    class="fixed bottom-0 z-10 flex h-56 w-full flex-col items-center bg-[#C4DCD0] pt-2"
+    class="fixed bottom-0 z-10 flex h-56 w-full flex-col items-center justify-self-center bg-[#C4DCD0] pt-2"
   >
     <div class="font-wotham text-title-red text-[30px]">
       {{ title }}

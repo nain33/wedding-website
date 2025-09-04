@@ -56,16 +56,18 @@ const goToDirectionsLink = () => {
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="grid w-full grid-cols-[1fr_0.1fr_1fr]">
           <div class="flex flex-col items-center self-center">
-            <div class="font-wotham text-title-red text-3xl md:text-5xl">
+            <div
+              class="font-wotham text-title-red text-3xl md:text-4xl xl:text-5xl"
+            >
               {{ event.eventName }}
             </div>
-            <div class="font-domine text-[17px] md:text-[24px]">
+            <div class="font-domine text-[17px] md:text-[20px] xl:text-[24px]">
               {{ event.location }}
             </div>
-            <div class="font-domine text-[12px] md:text-[19px]">
+            <div class="font-domine text-[12px] md:text-[15px] xl:text-[19px]">
               {{ event.address }}
             </div>
-            <div class="font-domine text-[12px] md:text-[19px]">
+            <div class="font-domine text-[12px] md:text-[15px] xl:text-[19px]">
               {{ event.time }}
             </div>
           </div>
@@ -73,7 +75,7 @@ const goToDirectionsLink = () => {
           <div class="mx-auto h-25 w-0.25 self-center bg-black"></div>
 
           <div
-            class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px] md:text-[16px]"
+            class="font-domine xs:text-[10px] flex flex-col items-center self-center text-center text-[8px] md:text-[12px] xl:text-[16px]"
           >
             <div class="mb-2">{{ event.description }}</div>
             <span class="italic">Dress code</span>
@@ -108,10 +110,24 @@ const goToDirectionsLink = () => {
     </div>
   </div>
 
-  <CalendarSelection
-    v-if="showCalendarSelection"
-    @close="showCalendarSelection = false"
-    :title="event.eventName"
-    :calendarEvent="event.calendarEvent"
-  />
+  <Transition>
+    <CalendarSelection
+      v-if="showCalendarSelection"
+      @close="showCalendarSelection = false"
+      :title="event.eventName"
+      :calendarEvent="event.calendarEvent"
+    />
+  </Transition>
 </template>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateY(100%);
+}
+</style>

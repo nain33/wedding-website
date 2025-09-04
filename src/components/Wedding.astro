@@ -11,7 +11,7 @@ import diyaBackground from "../assets/diya_background.jpeg";
 ---
 
 <div class="flex h-full flex-col">
-  <div class="relative md:bg-[#e5e4d2]">
+  <div class="relative mb-1 md:bg-[#e5e4d2]">
     <Image
       src={diyaBackground}
       alt="Diya Background"
@@ -92,15 +92,14 @@ import diyaBackground from "../assets/diya_background.jpeg";
 
     observer.observe(originalLinks!);
   </script>
+
   <div class="w-full bg-linear-to-br from-[#FFFFFF] to-[#e5e4d2]">
-    <!--TODO: Not sure about these drums, maybe need another img -->
     <div class="flex w-full flex-col gap-1">
+      <!-- <div class="mb-6"></div> -->
       <div
         class="xs:mx-32 mx-28 flex h-8 flex-row justify-center bg-[url('/src/assets/dandiya-ladies.svg')] bg-center bg-repeat-space md:mx-96 md:h-12"
       >
       </div>
-      <!-- <div class="mb-6"></div> -->
-
       <div
         id="timeline"
         class="flex w-full scroll-mt-14 flex-col gap-1 md:m-auto md:grid md:w-9/10 md:grid-cols-2 md:gap-6"
