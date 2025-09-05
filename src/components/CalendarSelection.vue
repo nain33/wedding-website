@@ -21,22 +21,10 @@ const emit = defineEmits<{
 const openCalendar = (calendar: string) => {
   if (calendar === "google") window.open(google(props.calendarEvent), "_blank");
   else if (calendar === "apple")
-    window.open(ics(props.calendarEvent), "_blank");
+    window.location.href = ics(props.calendarEvent);
   else if (calendar === "outlook")
     window.open(outlook(props.calendarEvent), "_blank");
 };
-
-//TODO: Figure out how to close this component when you click outside it. Adding event listener in mounted doesn't work cause it mounts, detects the click of the button, then emits the close - weirdly.
-onMounted(() => {
-  console.log("mounted");
-  // document.addEventListener("click", (event: any) => {
-  //   if (!event.target.closest("#calendar-selection")) {
-  //     console.log("closing");
-  //     emit("close");
-  //   }
-
-  // });
-});
 </script>
 
 <template>
