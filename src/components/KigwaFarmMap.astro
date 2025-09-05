@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import kigwaFarmMap from "../assets/kigwa-farm-map.jpeg";
+---
+
+<div
+  class="bg-background-green m-auto mb-10 w-full scroll-mt-14 px-5 pt-2 md:w-3/4 md:rounded-2xl md:border md:pt-4"
+>
+  <div class="flex flex-col items-center">
+    <div class="font-wotham text-title-red mb-2 text-2xl md:text-4xl">
+      Kigwa Farm Map
+    </div>
+  </div>
+  <Image src={kigwaFarmMap} alt="Kigwa Farm Map" class="m-auto mb-5 w-full" />
+</div>
