@@ -72,7 +72,7 @@ export const amalfiNight: Event = {
 export const randomShit: Event = {
   dayOfWeek: "Sunday",
   date: "05.07",
-  eventName: "Pithi & Mandvo",
+  eventName: "Mandvo & Pithi",
   location: "Kigwa Farm",
   address: "Kiambu Road, Nairobi",
   time: "9am - 2pm",
