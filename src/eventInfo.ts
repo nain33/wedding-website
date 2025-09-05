@@ -38,7 +38,7 @@ const amalfiNightCalendar: EventCalendar = {
 };
 
 const randomShitCalendar: EventCalendar = {
-  title: "Pithi & Mandvo",
+  title: "Mandvo & Pithi",
   start: new Date("2026-07-05T07:00:00Z"),
   end: new Date("2026-07-05T11:00:00Z"),
   location: "Kiambu Road, Nairobi",
