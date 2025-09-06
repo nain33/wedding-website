@@ -23,15 +23,15 @@ export type Event = {
 const weddingCalendar: EventCalendar = {
   title: "Nain and Niki's Wedding",
   start: new Date("2026-07-06T06:00:00Z"),
-  end: new Date("2026-07-06T14:00:00Z"),
+  end: new Date("2026-07-06T11:00:00Z"),
   location: "19 Ring Road, Nairobi",
   description: "Nain and Niki's wedding",
 };
 
 const amalfiNightCalendar: EventCalendar = {
   title: "Amalfi Night",
-  start: new Date("2026-07-04T15:00:00Z"),
-  end: new Date("2026-07-04T21:00:00Z"),
+  start: new Date("2026-07-04T12:00:00Z"),
+  end: new Date("2026-07-04T18:00:00Z"),
   location: "Kiambu Road, Nairobi",
   description:
     "Mehndi night with a twist (of lemons)! Kick off the wedding festivities with pizza, pasta, and booze if you’re feeling zesty.",
@@ -39,7 +39,7 @@ const amalfiNightCalendar: EventCalendar = {
 
 const randomShitCalendar: EventCalendar = {
   title: "Mandvo & Pithi",
-  start: new Date("2026-07-05T07:00:00Z"),
+  start: new Date("2026-07-05T12:00:00Z"),
   end: new Date("2026-07-05T11:00:00Z"),
   location: "Kiambu Road, Nairobi",
   description:
@@ -48,8 +48,8 @@ const randomShitCalendar: EventCalendar = {
 
 const receptionCalendar: EventCalendar = {
   title: "Reception",
-  start: new Date("2026-07-06T18:00:00Z"),
-  end: new Date("2026-07-06T23:59:59Z"),
+  start: new Date("2026-07-06T15:00:00Z"),
+  end: new Date("2026-07-06T20:59:59Z"),
   location: "Kiambu Road, Nairobi",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
