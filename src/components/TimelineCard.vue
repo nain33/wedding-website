@@ -55,7 +55,7 @@ const goToDirectionsLink = () => {
 
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="grid w-full grid-cols-[1fr_0.1fr_1fr]">
-          <div class="flex flex-col items-center self-center">
+          <div class="flex flex-col items-center self-center text-center">
             <div
               class="font-wotham text-title-red text-[25px] md:text-4xl xl:text-5xl"
             >

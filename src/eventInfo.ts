@@ -49,7 +49,7 @@ const receptionCalendar: EventCalendar = {
   title: "Reception",
   start: new Date("2026-07-06T15:00:00Z"),
   end: new Date("2026-07-06T20:59:59Z"),
-  location: "Kiambu Road, Nairobi",
+  location: "Broadwalk Mall, Nairobi",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
 };
@@ -100,12 +100,12 @@ export const reception: Event = {
   dayOfWeek: "Monday",
   date: "06.07",
   eventName: "Reception",
-  location: "Kigwa Farm",
-  address: "Kiambu Road, Nairobi",
+  location: "Broadwalk Mall",
+  address: "Ojijo Rd, Museum Hill, Parklands, Nairobi",
   time: "6pm - Late",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
   dressCode: "Bring your best party gear",
   calendarEvent: receptionCalendar,
-  directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
+  directionsLink: "https://maps.app.goo.gl/yQWLK3N1fvsNhSo86",
 };
