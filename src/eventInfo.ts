@@ -77,7 +77,7 @@ export const randomShit: Event = {
   time: "9am - 2pm",
   description:
     "Pre-wedding blessings and rituals, followed by lunch. I pithi the fool who’s getting married and has to write all this. Couldn’t be me.",
-  dressCode: "Casual Indian/Western",
+  dressCode: "Casual Indian/Western clothes that you don’t mind getting dirty",
   calendarEvent: randomShitCalendar,
   directionsLink: "https://maps.app.goo.gl/8adfba8sKuesfJWw6",
 };
@@ -90,7 +90,7 @@ export const wedding: Event = {
   address: "19 Ring Road, Nairobi",
   time: "9am - 2pm",
   description:
-    "Hindu ceremony kickstarting with Nain’s Baraat and ending with a good meal.",
+    "Hindu ceremony kickstarting with Nain’s Jaan and ending with a good meal.",
   dressCode: "Formal Indian/Western",
   calendarEvent: weddingCalendar,
   directionsLink: "https://maps.app.goo.gl/C6q1KzfmMf4LgUSK9",
@@ -102,7 +102,7 @@ export const reception: Event = {
   eventName: "Reception",
   location: "Broadwalk Mall",
   address: "Ojijo Rd, Museum Hill, Parklands, Nairobi",
-  time: "6pm - Late",
+  time: "6pm - 1am",
   description:
     "The event everybody’s really waiting for! Ending celebrations with a whole load of good food, drinks, and dancing.",
   dressCode: "Bring your best party gear",
